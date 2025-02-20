@@ -1,0 +1,12 @@
+<nav class="text-3xl font-bold underline">
+    <ul>
+        {{ metas.site }}
+    </ul>
+    {{ for obj of navigation }}
+    <ul>
+        <li>
+            <a href="{{ obj.url }}" data-id="{{ obj.id }}"> {{ obj.name }} </a>
+        </li>
+    </ul>
+    {{ /for }}
+</nav>

@@ -13,11 +13,11 @@ export default function (options: Partial<Options> = {}) {
     const files = [
       "_includes/css/reset.css",
       "_includes/layouts/base.vto",
+      "_includes/layouts/landing.vto",
       "uploads/favicon.svg",
       "_data/metas.yml",
-      "404.md",
-      "index.vto",
-      "styles.css",
+      "style.css",
+      "script.js"
     ];
 
     for (const file of files) {

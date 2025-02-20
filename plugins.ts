@@ -1,6 +1,8 @@
 import lightningcss from "lume/plugins/lightningcss.ts";
 import basePath from "lume/plugins/base_path.ts";
 import metas from "lume/plugins/metas.ts";
+import sass from "lume/plugins/sass.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 import { Options as SitemapOptions, sitemap } from "lume/plugins/sitemap.ts";
 import { favicon, Options as FaviconOptions } from "lume/plugins/favicon.ts";
 import { merge } from "lume/core/utils/object.ts";
@@ -14,7 +16,7 @@ export interface Options {
 
 export const defaults: Options = {
   favicon: {
-    input: "uploads/favicon.svg",
+    input: "images/favicon.svg",
   },
 };
 
@@ -26,8 +28,10 @@ export default function (userOptions?: Options) {
     site.use(lightningcss())
       .use(basePath())
       .use(metas())
+      .use(sass())
+      .use(esbuild())
       .use(sitemap(options.sitemap))
       .use(favicon(options.favicon))
-      .copy("uploads");
+      .copy("images");
   };
 }

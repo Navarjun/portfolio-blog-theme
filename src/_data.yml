@@ -1,5 +1,16 @@
 lang: en
 
+navigation:
+  - id: 1
+    name: Home
+    url: /
+  - id: 2
+    name: Blog
+    url: /blog
+  - id: 3
+    name: Portfolio
+    url: /portfolio
+
 metas:
   site: Lume site
   twitter: ""
